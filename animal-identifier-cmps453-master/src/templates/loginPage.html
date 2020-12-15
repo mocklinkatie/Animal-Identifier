@@ -1,0 +1,37 @@
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;">
+    <center><h1>A.I. - Animal Identifier</h2></center>
+    <center><p>Login page</p></center>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+    <br>
+
+        <form action="http://127.0.0.1:5000/login" method="post">
+          <center>
+            <input type="text" placeholder="Username" name="username" value="{{
+              request.form.username }}">
+            </center>
+            <center>
+             <input type="password" placeholder="Password" name="password" value="{{
+              request.form.password }}">
+            </center>
+
+              <center>
+              <input class="button" type="submit" value="Login">
+              </center>
+
+          </form>
+          {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+          {% endif %}
+    </form> 
+
+    <center>
+      <form action = "http://127.0.0.1:5000/" method="POST">
+        <center>
+          <input type="submit" name="submit_button" value="Home page">
+      </center>
+          <input type="submit" name="submit_button" value="Continue to homepage as guest">
+          </form>
+    </center>
+</div>
+

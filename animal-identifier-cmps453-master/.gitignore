@@ -1,0 +1,7 @@
+
+.DS_Store
+
+Flask-Backend/cypress/plugins
+Flask-Backend/cypress/support
+
+node_modules/

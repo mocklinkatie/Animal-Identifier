@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+
+<center>
+  <div class="topnav">
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+  </center>
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;">
+    <center><h1>Welcome!</h2></center>
+    <center><p>      <h1 class="title">
+      {{g.user.username}}'s Profile
+    </h1></p></center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css')}}">
+    
+      <br>
+      <center>
+        <h2>User uploads</h2>
+        {%for img in arr%}
+        <div style="height:40px;width:50px;overflow:scroll;">
+          <div class="row">
+          <div class="column">
+          <img src="{{url_for('static', filename=img)}}" alt="User Image" width="50" height="50">
+          </div>
+          </div>
+        </div>
+          {%endfor%}
+      </center>
+
+    </br>
+      <h2 class="subtitle">
+      </h2>
+      <center>
+        <form action = "http://127.0.0.1:5000/profiler" method="POST">
+            <input type="submit" name="submit_button" value="Identify an animal" placeholder="Identify another animal">
+            </form>
+      </center>
+
+    </br>
+</div>  
+
+
+

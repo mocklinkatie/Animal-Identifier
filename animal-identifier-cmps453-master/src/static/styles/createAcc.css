@@ -1,0 +1,11 @@
+.container{
+    margin: 2vw;
+    padding:2vh;
+    background-color: rgb(222, 243, 146) ;
+    height:50vh;
+    width: 25vw;
+    box-shadow: 0 0px 10px 3px black;
+    position: absolute;
+    border-radius: 12px;
+}
+

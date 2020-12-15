@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;">
+      <center><h1>A.I. - Animal Identifier</h2></center>
+      <center><p>Welcome</p></center>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css')}}">
+      <body>
+        <br>
+      </br>
+        <center>
+          <form method="POST">
+        <input type="submit" name="submit_button" value="Continue to homepage as guest">
+      </form>
+        </center>
+        <center>
+        <form method="POST">
+        <input type="submit" name="submit_button" value="Login page">
+        </form>
+        </center>
+        <center>
+        <form method="POST">
+        <input type="submit" name="submit_button" value="Create account">
+        </center>
+        </form>
+      </body>
+</div>
+
+
+
+<!---
+<html>
+  <head>
+    <title>This is the title of the webpage!</title>
+  </head>
+  <body>
+    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
+    <form method="POST">
+        <input type="submit" name="submit_button" value="Continue to homepage as guest">
+      </form>
+  </body>
+</html>
+--> 
+

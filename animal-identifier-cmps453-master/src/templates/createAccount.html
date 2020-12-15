@@ -1,0 +1,21 @@
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;">
+        <center><h1>A.I. - Animal Identifier</h2></center>
+        <center><p>Create an Account</p></center>
+    
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+        <br> 
+            <form action="http://127.0.0.1:5000/makeAccount" method="post">
+                <input type="text" placeholder="Username" name="username" value="{{
+                  request.form.username }}">
+                 <input type="password" placeholder="Password" name="password" value="{{
+                  request.form.password }}">
+                  <input type="password" placeholder="Retype password" name="password2" value="{{
+                    request.form.password2 }}">
+                <input class="button" type="submit" value="Create account">
+              </form>
+              {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+              {% endif %}
+        </form>
+</div>
+

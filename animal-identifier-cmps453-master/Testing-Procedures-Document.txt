@@ -1,0 +1,65 @@
+Testing Procedures Document
+
+	Unit Testing - Includes Internal Support Functions (Data Validation, ML Execution) and API
+	
+		Unit testing currently uses pytest.  Pytest imports the python code under test which 
+		requires the pytest source files to be in the same directory as the code being tested.
+	
+		Pytest is being used to test the validity of normal python functions within the backend.
+		Normal python funcions provide support for the flask decorated functions which form the
+		api.  The flask decorated functions require the rest of flask in order to function properly
+		and will therefore require a different approach for testing.
+	
+		If a new test is desired for one of the functions which already exist in the backend,
+		all that is required is to find where the function is already being tested and insert
+		before, after or within the set of existing tests another test function in the same
+		style as required by pytest.
+		
+		To test a new function will require importing the specific function name such as:
+		
+				from backend import new_function
+
+		Naming of tests should indicate the general nature of what is being tested.
+		
+				test_validEmail_goodform() checks against emails of good form
+				test_validEmail_badform() checks against email of bad form (negative assertion)
+	
+		If tests for a new function are desired, then all that is required is to do the same as
+		listed above except to insert the needed tests together.  It is best to keep all the tests
+		for any specific function grouped together.
+	
+	
+	
+	System Testing
+
+		System testing is being performed with Cypress and its plugin cypress-file-upload. npm is required as a result of this
+		as it is the package manager used to install cypress and its dependencies.
+		
+		Cypress will test different interactions between components of our application such as how a potential
+		user will upload a picture and get a result.
+
+		To run cypress tests for our application, the flask server must be running. This can be done by running "backend.py".
+
+		In the GitLab repo, Cypress in its entirety is not tracked, meaning if you want to be able to test for yourself
+		you must install cypress and its plugins via npm with the following commands:
+
+			cd <cloned-directory>/Flask-Backend
+
+			npm i cypress --save-dev
+
+			npm install cypress-file-upload
+
+		Once done, cypress will be installed and you must initialize and run it using the following commands:
+
+			(assuming you're still in <cloned-directory>/Flask-Backend )
+
+			node_modules/.bin/cypress open
+
+		Cypress keeps all of its tests in a folder "integration" in the path "<cloned-directory>/Flask-Backend/cypress/integration"
+		If you want to add to these tests, make a new .js file in this directory and add it there.
+
+		If cypress needs to access a file (such as a picture, like in our test.upload.js), the file must be 
+		present in "<cloned-directory>/Flask-Backend/cypress/fixtures". It will not understand where the file is otherwise.
+
+
+	

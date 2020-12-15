@@ -1,0 +1,15 @@
+USE AnimalFinderDB;
+DROP procedure IF EXISTS sp_AuthenticateUser;
+
+DELIMITER $$
+USE ItemListDb$$
+CREATE PROCEDURE sp_AuthenticateUser (
+IN p_username VARCHAR(45)
+)
+BEGIN
+
+     select * from tblUser where UserName = p_username;
+
+END$$
+
+DELIMITER ;

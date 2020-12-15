@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" type="text/css" href="Flask-Backend/static/styles/nav.css" />
+</head>
+
+<center>
+  <div class="topnav">
+    <a href="{{ url_for('profile') }}">Account page</a>
+  </div>
+  </center>
+
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;background-image: url('static/styles/chicken.png');background-size:130%;  background-repeat: no-repeat;">
+    <center><h1>Your animal is a :</h2></center>
+      <center>
+        <div style="color:rgb(22, 201, 22)">Chicken</div>
+        </center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+    <br>
+    
+    <center>
+        <p style="color:rgb(51, 255, 0)"> There are over 25 billion chickens in the world</p>
+        <p style="color:rgb(51, 255, 0)"> Birds are omnivores: they eat meat and vegetables!</p>
+        <p style="color:rgb(51, 255, 0)"> Despite being a bird, they can only fly short distances</p>
+    </center>
+    <center>
+        <form method="POST">
+      <input type="submit" name="submit_button" value="Identify another animal">
+    </form>
+
+      </center>
+</div>
+
+</html>

@@ -1,0 +1,27 @@
+<center>
+   <div class="topnav">
+     <a href="{{ url_for('profile') }}">Account page</a>
+   </div>
+</center>
+
+<h1 class="title">
+   <center>
+   Hello {{g.user.username}}
+   
+   </center>
+ </h1>
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;">
+   <center><h1>A.I. - Animal Identifier</h2></center>
+   <center><p>Welcome</p></center>
+   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/index.css')}}">
+   <body>
+      <p></p>
+      <form action = "http://127.0.0.1:5000/Uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form>   
+   </body>
+
+</div>

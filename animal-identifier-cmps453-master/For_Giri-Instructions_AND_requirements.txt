@@ -1,0 +1,35 @@
+Team M - Traylor
+Animal Idetenifier
+
+
+
+
+Versions:
+Flask: 1.1.2
+Tensorflow: 2.4.0 (any version >= 2.3 should suffice)
+Werkzeug: 1.0.1
+Numpy: 1.18.1
+
+
+
+
+How to run:
+Open a terminal, navigate to the cloned repo, and then cd Flask-Backend/. From here you can either run the commands python3 backend.py or python backend.py, which will start a local server on http://127.0.0.1:5000/. 
+
+
+
+
+Alternative method:
+Copy the cloned repo into VScode and run the project from there.
+
+
+
+
+Potential issues:
+1. If using VScode: make sure to select the correct interpreter depending on your virtual environment.
+2. Pathing within the backend.py and various HTML files could be an issue. To my knowledge, it seems that most of these issues depend on how you run backend.py in the terminal
+   1. I have left comments detailing the paths I use near any ‘troublesome’ paths. 
+   2. For the pathing system I have commented, backend.py must be ran from a folder that is a predecessor to Flask-Backend/.
+   3. Example: /animal-identifier-cmps453/Flask-Backend/
+   4. Backend.py is being ran from /animal-identifier/cmps453/, even though it is in /Flask-Backend/.
+3. Make sure all instances of the website occur on 127.0.0.1:5000/*

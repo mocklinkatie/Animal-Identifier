@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" type="text/css" href="Flask-Backend/static/styles/nav.css" />
+</head>
+
+<center>
+  <div class="topnav">
+    <a href="{{ url_for('profile') }}">Account page</a>
+  </div>
+  </center>
+
+
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;background-image: url('/static/styles/sheep.png');background-size:136%;  background-repeat: no-repeat;">
+    <center><h1>Your animal is a :</h2></center>
+      <center>
+        <div style="color:rgb(51, 255, 0)">Sheep</div>
+        </center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+    <br>
+    
+    <center>
+        <p style="color:rgb(51, 255, 0)"> They have rectangular pupils</p>
+        <p style="color:rgb(51, 255, 0)"> Sheep have an excellent sense of smell</p>
+        <p style="color:rgb(51, 255, 0)"> Sheep can self-medicate by using plants to prevent disease</p>
+    </center>
+    <center>
+        <form method="POST">
+      <input type="submit" name="submit_button" value="Identify another animal">
+    </form>
+
+      </center>
+</div>
+
+</html>

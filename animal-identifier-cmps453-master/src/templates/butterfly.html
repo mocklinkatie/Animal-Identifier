@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" type="text/css" href="Flask-Backend/static/styles/nav.css" />
+</head>
+
+<center>
+  <div class="topnav">
+    <a href="{{ url_for('profile') }}">Account page</a>
+  </div>
+  </center>
+
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;background-image: url('static/styles/butterfly.jpg');background-size:200%;  background-repeat: no-repeat;">
+    <center><h1>Your animal is a :</h2></center>
+      <center>
+        <div style="color:rgb(0, 195, 255)">Butterfly</div>
+        </center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+    <br>
+    
+    <center>
+        <p style="color:rgb(51, 255, 0)"> Butterflies are insects</p>
+        <p style="color:rgb(51, 255, 0)"> Caterpillars turn into butterflies through metamorphosis</p>
+        <p style="color:rgb(51, 255, 0)"> Butterflies have four wings</p>
+    </center>
+    <center>
+        <form method="POST">
+      <input type="submit" name="submit_button" value="Identify another animal">
+    </form>
+
+      </center>
+</div>
+
+</html>
+

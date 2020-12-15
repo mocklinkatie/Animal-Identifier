@@ -1,0 +1,17 @@
+Folder Structure Document
+
+	This document provides the heirarchy of the folders / directories for the project.
+	
+	
+
+	animal-identifier-cmps453
+	
+		Flask-Backend (contains source code and other files related to the backend)
+		
+			static (contains static html pages)
+			
+			templates (contains additional html pages)
+			
+			uploads (contains photos uploaded by the users)
+			
+			

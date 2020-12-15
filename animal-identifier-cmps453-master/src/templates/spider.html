@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  <link rel="stylesheet" type="text/css" href="Flask-Backend/static/styles/nav.css" />
+</head>
+
+<center>
+  <div class="topnav">
+    <a href="{{ url_for('profile') }}">Account page</a>
+  </div>
+  </center>
+
+
+<div class="container" style = "top:25%; right:33.33%; font-weight:bold;background-image: url('static/styles/spider.png');background-size:100%;  background-repeat: no-repeat;">
+    <center><h1>Your animal is a :</h2></center>
+      <center>
+        <div style="color:rgb(51, 255, 0)">Spider</div>
+        </center>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/createAcc.css')}}">
+    <br>
+    
+    <center>
+        <p style="color:rgb(51, 255, 0)"> All spiders produce silk</p>
+        <p style="color:rgb(51, 255, 0)"> Female spiders can lay up to 3,000 eggs at once</p>
+        <p style="color:rgb(51, 255, 0)"> Spiders commonly have 8 legs</p>
+    </center>
+    <center>
+        <form method="POST">
+      <input type="submit" name="submit_button" value="Identify another animal">
+    </form>
+
+      </center>
+</div>
+
+</html>

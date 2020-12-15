@@ -1,0 +1,31 @@
+DELIMITER $$
+USE AnimalFinderDB$$
+CREATE PROCEDURE spCreateUser (
+IN p_Username varchar(45),
+IN p_Useremail varchar(45)
+IN p_Password varchar(45)
+)
+BEGIN
+
+if ( select exists (select 1 from tblUser where UserName = p_username) ) THEN
+
+    select 'Username Exists !!';
+
+ELSE
+
+insert into tblUser
+(
+    UserName,
+    Password
+)
+values
+(
+    p_Username,
+    p_Password
+);
+
+END IF;
+
+END$$
+
+DELIMITER ;
